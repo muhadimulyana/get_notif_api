@@ -160,6 +160,7 @@ class DeviceTokenController extends Controller
 
         curl_close($curl);
         //echo $response; 
+        $response = json_decode($response);
         return response()->json($response, 200);
     }
 
